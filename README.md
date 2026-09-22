@@ -145,7 +145,7 @@ Jika saat menginput itu kita lansung enter atau mengisi dengan input kosong maka
 
 Selain validasi dasar di View, Controller juga memiliki validasi bisnis, misalnya melakukan pengecekan apakah ID produk sudah digunakan sebelum data baru ditambahkan.
 
-``
+```
 java
 int idProduk;
         while (true) {
