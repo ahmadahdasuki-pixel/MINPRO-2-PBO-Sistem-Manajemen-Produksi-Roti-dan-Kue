@@ -242,5 +242,62 @@ Dengan overriding tersebut, method yang memiliki nama sama dapat memberikan peri
 
 
 ## 7. Alur Dokumentasi Program 
+**Tampilan Menu Utama**
+
+<img width="332" height="171" alt="image" src="https://github.com/user-attachments/assets/b0f8486d-e779-4e01-b0f7-dc9896379377" />
+
+Ini merupakan Tampilan Menu Utama saat pertama kali program di jalankan.
+
+<img width="362" height="237" alt="image" src="https://github.com/user-attachments/assets/7bf7fd86-c150-4085-82bd-51473a1cc4fc" />
+
+Di saat Kita salah menginput pilihan pada menu utama maka program akan berulang balik ke menu utama dan di atas dapat di lihat validasinya apabila kita salah menginput di luar dari tipe data atau di luar batas nilai piliha 1-5.
+
+**Menu 1 Tambah Produk**
+
+<img width="291" height="141" alt="image" src="https://github.com/user-attachments/assets/30c7873d-d827-4a87-a52e-c7b49a2562e2" />
+
+
+<img width="337" height="54" alt="image" src="https://github.com/user-attachments/assets/4b7703a8-389a-4871-b205-bf1ed5f7cdea" />
+
+
+<img width="281" height="108" alt="image" src="https://github.com/user-attachments/assets/41ac347d-5efe-44a7-8da6-628f610ee907" />
+
+
+<img width="275" height="353" alt="image" src="https://github.com/user-attachments/assets/19dec1b5-f860-487d-aded-f63b3c544677" />
+
+
+<img width="462" height="470" alt="image" src="https://github.com/user-attachments/assets/c31bc1de-21e2-46e8-bfac-1cf62faa1bab" />
+
+
+**Menu 2 Tampilkan Produk**
+
+<img width="271" height="586" alt="image" src="https://github.com/user-attachments/assets/53428f78-059e-4472-a0b8-57e13f1d7e40" />
+
+**Menu 3 Ubah Data Produk**
+
+<img width="229" height="88" alt="image" src="https://github.com/user-attachments/assets/342aac81-0ee6-4d07-9e17-688d3bea86c8" />
+
+<img width="245" height="75" alt="image" src="https://github.com/user-attachments/assets/38e8d780-e21c-44ae-8755-7d01d0d19e4d" />
+
+<img width="305" height="225" alt="image" src="https://github.com/user-attachments/assets/8aa57350-9b56-4c33-8b81-3aaf1a6e07b9" />
+
+**Menu 4 Hapus Data Produk**
+
+<img width="321" height="362" alt="image" src="https://github.com/user-attachments/assets/c7e5e2d1-00d2-4faa-871f-1aec5e582b63" />
+
+**Menu 5 Keluar**
+
+<img width="482" height="268" alt="image" src="https://github.com/user-attachments/assets/948ea264-09cb-4530-9d74-6c1a7efa29f1" />
+
+
+
+
+
+
+
+
+
+
+
 
 
