@@ -196,6 +196,19 @@ public void setStok(int stok) {
 Penerapan encapsulation membuat data pada objek lebih terkontrol karena akses terhadap atribut dilakukan melalui method yang telah disediakan oleh class. Pada class Roti, atribut khusus seperti rasa dan ukuranRoti juga menggunakan private. Sedangkan pada class Kue, atribut jenisKue dan ukuranKue juga dibuat private dan diakses menggunakan getter dan setter.
 
 ## 5. Penerapan Inheritence
+Konsep inheritance diterapkan dengan membuat class Produk sebagai superclass, kemudian class Roti dan Kue sebagai subclass. Kemudian class Roti dan Kue beserta masing masing atributnya mewarisi atribut dan method dari class Produk menggunakan:
+```
+java
+public class Roti extends Produk
+private String rasa;
+private String ukuranRoti;
+
+public class Kue extends Produk
+private String jenisKue;
+private String ukuranKue;
+```
+Dengan inheritance, atribut dan method yang bersifat umum tidak perlu ditulis ulang pada class Roti dan Kue. Kedua class tersebut cukup mewarisinya dari class Produk.
+
 ## 6. Penerapan Polymorpishm Overriding
 ## 7. Dokumentasi Alur Progam
 
