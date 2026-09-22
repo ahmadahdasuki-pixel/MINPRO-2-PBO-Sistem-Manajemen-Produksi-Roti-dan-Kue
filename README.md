@@ -38,7 +38,7 @@ Dengan demikian, Controller berfokus pada proses CRUD dan logika bisnis program 
 **Class Main**
 Class Main merupakan titik awal program. Class ini membuat objek View dan ManajemenSistem, kemudian menjalankan menu utama.
 
-``
+```
 java
 public class Main {
 
@@ -52,7 +52,7 @@ public class Main {
         view.tutupScanner();
     }
 }
-``
+```
 
 Dari kode di atas pada class Main saya hanya perlu membuat objek view dan controller yang sudah di kaitkan dari class package View dan Controller untuk saya panggil method nya dan juga program akan lansung berjalan sesuai dengan logika yang sudah di buat pada masing masing package class.
 
@@ -63,26 +63,114 @@ Dengan Demikian Penerapan MVC ini juga saya terapkan demi reusabilitas kode pada
 Validasi input digunakan untuk memastikan data yang dimasukkan pengguna sesuai dengan aturan dasar program. Validasi input diterapkan pada class View karena View bertanggung jawab terhadap interaksi langsung dengan pengguna.
 
 Validasi angka dilakukan menggunakan hasNextInt() dan hasNextDouble(). Contohnya pada input ID:
-``
+
+
+```
 java
-while (true) {
+public int inputId() {
+        while (true) {
             System.out.print("ID Produk : ");
             if (scanner.hasNextInt()) {
                 int id = scanner.nextInt();
                 scanner.nextLine();
+                if (id > 0) {
+                    return id;
+                }System.out.println("Input Harus Di atas dari 0!");
+            } else {
+                System.out.println("ID harus berupa angka");
+                scanner.nextLine();
+            }
+        }
+    }
                 .......
 
-while (true) {
+public double inputHarga() {
+        while (true) {
             System.out.print("Harga Produk : ");
             if (scanner.hasNextDouble()) {
                 double harga = scanner.nextDouble();
                 scanner.nextLine();
-                ......
-}
+                if (harga > 0) {
+                    return harga;
+                }System.out.println("Harga Harus Di Atas 0!!!");
+            } else {
+                System.out.println(
+                "Harga harus berupa angka");
+                scanner.nextLine();
+            }
+        }
+    }
+
+public int inputMenu() {
+        while (true) {
+            System.out.print("Pilih menu : ");
+            if (scanner.hasNextInt()) {
+                int pilihan = scanner.nextInt();
+                scanner.nextLine();
+                if (pilihan >= 1 && pilihan <= 5) {
+                    return pilihan;
+                }System.out.println("Pilihan Menu Hanya 1 Sampai 5 !!!");
+                
+            }   else {
+                System.out.println("Input Harus Berupa Angka");
+                scanner.nextLine();
+            }
+        }
+    }
+
+```
+
+Jika pengguna memasukkan data yang bukan angka, program akan memberikan pesan kesalahan dan meminta pengguna memasukkan data kembali. Program juga menggunakan while (true) agar proses input terus dilakukan sampai pengguna memberikan input yang benar. Selain validasi tipe data, program juga melakukan validasi terhadap nilai. Contohnya ID harus lebih dari 0 dan harga harus lebih dari 0, dan pilihan menu harus berada pada angka 1 sampai 5.
+
+Untuk input String, program memeriksa apakah input kosong menggunakan:
+
+```
+java
+public String inputNamaProduk() {
+        while (true) {
+            System.out.print("Nama Produk : ");
+            String nama = scanner.nextLine();
+            if (!nama.trim().isEmpty()) {
+                return nama;
+            }
+            System.out.println(
+                    "Nama produk tidak boleh kosong!"
+            );
+        }
+    }
+
+```
+
+Jika saat menginput itu kita lansung enter atau mengisi dengan input kosong maka program akan berulang karena program tersebut tidak boleh terisi kosong.
+
+Selain validasi dasar di View, Controller juga memiliki validasi bisnis, misalnya melakukan pengecekan apakah ID produk sudah digunakan sebelum data baru ditambahkan.
 
 ``
+java
+int idProduk;
+        while (true) {
+            idProduk = view.inputId();
+            boolean idSudahAda = false;
+            for (Roti roti : daftarProdukRoti) {
+                if (roti.getIdProduk() == idProduk) {
+                    idSudahAda = true;
+                    break;
+                }
+            }
+            for (Kue kue : daftarProdukKue) {
+                if (kue.getIdProduk() == idProduk) {
+                    idSudahAda = true;
+                    break;
+                }
+            }
+            if (!idSudahAda) {
+                break;
+            }
+            System.out.println("ID Produk Tersebut Sudah Di gunakan");
+        }
 
-Jika pengguna memasukkan data yang bukan angka, program akan memberikan pesan kesalahan dan meminta pengguna memasukkan data kembali. Program juga menggunakan while (true) agar proses input terus dilakukan sampai pengguna memberikan input yang benar. Selain validasi tipe data, program juga melakukan validasi terhadap nilai. Contohnya ID harus lebih dari 0, stok tidak boleh kurang dari 0, harga harus lebih dari 0, dan pilihan menu harus berada pada angka 1 sampai 5.
+```
+
 
 
 ## 4. Penerapan Encasulaption 
