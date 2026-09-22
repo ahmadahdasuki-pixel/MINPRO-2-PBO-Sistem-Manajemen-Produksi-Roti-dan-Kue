@@ -171,9 +171,30 @@ int idProduk;
 
 ```
 
-
-
 ## 4. Penerapan Encasulaption 
+Konsep encapsulation diterapkan dengan menyembunyikan atribut yang terdapat pada class menggunakan access modifier private. Atribut pada class Produk, Roti, dan Kue tidak dapat diakses secara langsung dari class lain
+
+Contohnya pada class Produk:
+```
+java
+private int idProduk;
+private String namaProduk;
+private int stok;
+private double hargaProduk;
+```
+Karena atribut menggunakan private, class lain tidak dapat mengubah nilai atribut secara langsung. Untuk mengambil nilai atribut digunakan method getter, sedangkan untuk mengubah nilai atribut digunakan method setter.
+```
+java
+public int getStok() {
+    return stok;
+}
+
+public void setStok(int stok) {
+    this.stok = stok;
+}
+```
+Penerapan encapsulation membuat data pada objek lebih terkontrol karena akses terhadap atribut dilakukan melalui method yang telah disediakan oleh class. Pada class Roti, atribut khusus seperti rasa dan ukuranRoti juga menggunakan private. Sedangkan pada class Kue, atribut jenisKue dan ukuranKue juga dibuat private dan diakses menggunakan getter dan setter.
+
 ## 5. Penerapan Inheritence
 ## 6. Penerapan Polymorpishm Overriding
 ## 7. Dokumentasi Alur Progam
