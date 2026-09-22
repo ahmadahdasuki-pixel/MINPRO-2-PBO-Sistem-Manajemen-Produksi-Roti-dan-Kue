@@ -210,5 +210,34 @@ private String ukuranKue;
 Dengan inheritance, atribut dan method yang bersifat umum tidak perlu ditulis ulang pada class Roti dan Kue. Kedua class tersebut cukup mewarisinya dari class Produk.
 
 ## 6. Penerapan Polymorpishm Overriding
+Konsep polymorphism dengan overriding dapat diterapkan ketika subclass memiliki method dengan nama dan parameter yang sama seperti superclass, tetapi memberikan implementasi yang berbeda.
+Pada program ini, polymorphism dapat diterapkan pada method dari class Produk yang merupakan superclass:
+```
+java
+public void tampilkanProduk() {
+}
+```
+
+Lalu kita override untuk kita panggil method nya ke class roti dan kue seperti ini:
+```
+java
+@Override
+    public void tampilkanProduk() {
+    super.tampilkanProduk();
+        System.out.println("Jenis Produk : Roti");
+        System.out.println("Rasa         : " + rasa);
+        System.out.println("Ukuran       : " + ukuranRoti);
+    }    ...
+
+@Override
+    public void tampilkanProduk() {
+    super.tampilkanProduk();
+        System.out.println("Jenis           : Kue");
+        System.out.println("Jenis Kue       : " + jenisKue);
+        System.out.println("Ukuran          : " + ukuranKue);
+    }
+
+Dengan overriding tersebut, method yang memiliki nama sama dapat memberikan perilaku berbeda sesuai dengan objek yang digunakan. Contohnya, objek Roti akan menampilkan informasi khusus seperti rasa dan ukuranRoti, sedangkan objek Kue akan menampilkan jenisKue dan ukuranKue.
+
 ## 7. Dokumentasi Alur Progam
 
