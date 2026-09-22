@@ -256,22 +256,21 @@ Di saat Kita salah menginput pilihan pada menu utama maka program akan berulang 
 
 <img width="291" height="141" alt="image" src="https://github.com/user-attachments/assets/30c7873d-d827-4a87-a52e-c7b49a2562e2" />
 
-
-<img width="337" height="54" alt="image" src="https://github.com/user-attachments/assets/4b7703a8-389a-4871-b205-bf1ed5f7cdea" />
-
+Pertama kita akan cek Validasi bisnisnya apabila ID produk tersebut sudah ada maka program akan mengulang memberikan input idProduk baru untuk kita lakukan tambah produk dan apabila kita juga salah dalam menginput seperti menginput huruf atau kata pada inputan yang harusnya String maka program juga akan mengulang untuk memberikan inputan ulang idProduk sampai benar. Dan ini juga akan berlaku pada inputan tipe data int dan double lainnya.
 
 <img width="281" height="108" alt="image" src="https://github.com/user-attachments/assets/41ac347d-5efe-44a7-8da6-628f610ee907" />
 
+Setelah itu kitaa akan memasukan id baru nyaa yaitu 75 sebagai id produk baru yang ingin kita tambah kan, lalu lanjut menginput nama produk, saat menginput nama produk tidak boleh inpu kosong harus ada isi nya jika kosong maka program input nama produk akan berulang sampai benar karena inputnya tidak boleh kosong. Dan ini juga berlaku pada inputan lain yang memiliki tipe data String.
 
-<img width="275" height="353" alt="image" src="https://github.com/user-attachments/assets/19dec1b5-f860-487d-aded-f63b3c544677" />
+<img width="279" height="393" alt="image" src="https://github.com/user-attachments/assets/46cb4742-c29b-4835-91fc-f2515361883c" />
 
-
-<img width="462" height="470" alt="image" src="https://github.com/user-attachments/assets/c31bc1de-21e2-46e8-bfac-1cf62faa1bab" />
-
+Setelah kita menginput produk, kita akan di arahkan ke pilihan jenis produk agar kita bisa mengkategorikan produk baru yang ingin kita tambahkan ini kategori nya roti atau kue. Pada implementasi ini saya memilih kue dan langsung lanjut untuk menambahkan data produksi nya terlebih dahulu agar kitaa bisa mengetahui batch dari proses produksi nya itu apa saja, setelah nya baru lansung lanjut ke input atribut dari kue tersebut yaitu "jenis kue" Dan "ukuran kue" Untuk menentukan aneka kue nya nanti seperti apa.
 
 **Menu 2 Tampilkan Produk**
 
 <img width="271" height="586" alt="image" src="https://github.com/user-attachments/assets/53428f78-059e-4472-a0b8-57e13f1d7e40" />
+
+Ini adalah output Menu kedua yaitu tampilkanProduk() , yang dimana method ini tampilannya juga mengambil dari data dummy dan data yang baru saja kita tambahkan saat berada di method tambahProduk() sebelumnya dan dapat di lihat produk yang baru saja kita tambahkan sudah tertera pada output program.
 
 **Menu 3 Ubah Data Produk**
 
@@ -279,15 +278,23 @@ Di saat Kita salah menginput pilihan pada menu utama maka program akan berulang 
 
 <img width="245" height="75" alt="image" src="https://github.com/user-attachments/assets/38e8d780-e21c-44ae-8755-7d01d0d19e4d" />
 
+Pada Menu ketiga yaitu menu Update saat ingin menginput id produk atau mencari id produk roti atau kue itu dapat di lihat bahwa id dari masing-masing produk di temukan karena mengambil atau menggunakan getidProduk yang dalamnya sudah terdaftar data data produk lain. Jika id Produk roti yang di input maka data produk roti di temukan dan sebaliknya pada kue pun begitu
+
 <img width="305" height="225" alt="image" src="https://github.com/user-attachments/assets/8aa57350-9b56-4c33-8b81-3aaf1a6e07b9" />
+
+Nahh selanjutnya proses update nyaa, disini saya ingin melakukan update pada produk dengan id 75 atau Brownies Coklat, yang dimana saya mengubah stoknya, harga produk, jumlah produksi, tanggal produksi, status produksi dan ukuran kue. Kenapa saya hanya mengubah atribut itu saja karena isi nya itu secara real time bisa berubah bisa berkurang , bisa bertambah ataupun berubah ketentuannya seperti contoh status produksi yang awalnya "Sedang Proses" Bisa berubah nanti menjadi "Berhasil"
 
 **Menu 4 Hapus Data Produk**
 
 <img width="321" height="362" alt="image" src="https://github.com/user-attachments/assets/c7e5e2d1-00d2-4faa-871f-1aec5e582b63" />
 
+Selanjutnya masuk ke menu keempat yaitu hapus Produk yang dimana untuk menghapus sebuah produk kita harus input id dari produk tersebut tidak jauh berbeda juga dengan menu update sebelum nya dalam konteks mencari id produk untuk kita lakukan CRUD yang dimana pada menu hapus inipun dia akan menghapus sesuai dengan id produk yang terdaftar di masing-masing kategori dan dari output gambar di atas dapat di lihat saya menghapus produk dengan id 75 dan ituadalah data produk dari kue.
+
 **Menu 5 Keluar**
 
 <img width="482" height="268" alt="image" src="https://github.com/user-attachments/assets/948ea264-09cb-4530-9d74-6c1a7efa29f1" />
+
+Menu kelima keluar program dan program pun selesai. Terimakasih🙏🏻
 
 
 
